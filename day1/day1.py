@@ -1,10 +1,20 @@
-import urllib.request; 
+def solve_one():
+	f = open("a.in", "r")
+	Lines = f.readlines()
+	sum = 0
+	for line in Lines:
+		# find forward number
+		for c in line:
+			if(c.isdigit()):
+				sum += int(c)
+				break
 
+		# last num
+		for c in reversed(line):
+			if(c.isdigit()):
+				sum += int(c)
+				break
 
-def solve_one(problem = String):
-	s = urllib.request.urlretrieve(problem, "problem1.txt")
-	
+	print(sum)
 
-
-
-solve_one(https://adventofcode.com/2023/day/1/input)
+solve_one()
